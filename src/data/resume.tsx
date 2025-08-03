@@ -158,7 +158,7 @@ export const DATA = {
         "",
     },
     {
-      title: "Shopper Website",
+      title: "Shopper",
       href: "https://ecommerce-next-sanity-ivory.vercel.app",
       dates: "Apr 2024 - May 2024",
       active: true,
