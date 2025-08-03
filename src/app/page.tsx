@@ -1,7 +1,8 @@
 import { HackathonCard } from "@/components/hackathon-card";
 import BlurFade from "@/components/magicui/blur-fade";
 import BlurFadeText from "@/components/magicui/blur-fade-text";
-import { ProjectCard } from "@/components/project-card";
+import { Projects } from "@/components/projects-section";
+import { RealTimeClock } from "@/components/real-time-clock";
 import { ResumeCard } from "@/components/resume-card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
@@ -29,6 +30,25 @@ export default function Page() {
                 delay={BLUR_FADE_DELAY}
                 text={DATA.description}
               />
+              <BlurFade delay={BLUR_FADE_DELAY * 2}>
+                <div className="flex flex-wrap gap-2 mt-1">
+                  <Badge variant="outline" className="flex items-center gap-1 hover:border-[#689d6a] transition-colors group cursor-pointer">
+                    <svg className="size-3 transition-colors group-hover:text-[#689d6a]" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" fill="currentColor"/>
+                    </svg>
+                    <span className="transition-colors group-hover:text-[#689d6a]">
+                      {DATA.location}
+                    </span>
+                  </Badge>
+                  <RealTimeClock />
+                  <Badge variant="outline" className="flex items-center gap-1 hover:border-[#8ec07c] transition-colors group cursor-pointer">
+                    <div className="size-2 bg-[#8ec07c] rounded-full animate-pulse transition-colors group-hover:bg-[#689d6a]"></div>
+                    <span className="transition-colors group-hover:text-[#8ec07c]">
+                      Available for work
+                    </span>
+                  </Badge>
+                </div>
+              </BlurFade>
             </div>
             <BlurFade delay={BLUR_FADE_DELAY}>
               <Avatar className="size-28 border">
@@ -61,6 +81,7 @@ export default function Page() {
             >
               <ResumeCard
                 key={work.company}
+                location={work.location}
                 logoUrl={work.logoUrl}
                 altText={work.company}
                 title={work.company}
@@ -86,12 +107,14 @@ export default function Page() {
             >
               <ResumeCard
                 key={education.school}
+                location={education.location}
                 href={education.href}
                 logoUrl={education.logoUrl}
                 altText={education.school}
                 title={education.school}
                 subtitle={education.degree}
                 period={`${education.start} - ${education.end}`}
+                description={education.description}
               />
             </BlurFade>
           ))}
@@ -105,7 +128,7 @@ export default function Page() {
           <div className="flex flex-wrap gap-1">
             {DATA.skills.map((skill, id) => (
               <BlurFade key={skill} delay={BLUR_FADE_DELAY * 10 + id * 0.05}>
-                <Badge key={skill}>{skill}</Badge>
+                <Badge key={skill} variant="outline" className="bg-[#928374]/20 text-[#928374] border-[#928374]/30 hover:bg-[#689d6a]/20 hover:text-[#689d6a] hover:border-[#689d6a]/50 dark:bg-[#504945]/30 dark:text-[#a89984] dark:border-[#665c54] dark:hover:bg-[#689d6a]/20 dark:hover:text-[#8ec07c] dark:hover:border-[#689d6a]/50 transition-colors duration-200">{skill}</Badge>
               </BlurFade>
             ))}
           </div>
@@ -113,43 +136,7 @@ export default function Page() {
       </section>
       <section id="projects">
         <div className="space-y-12 w-full py-12">
-          <BlurFade delay={BLUR_FADE_DELAY * 11}>
-            <div className="flex flex-col items-center justify-center space-y-4 text-center">
-              <div className="space-y-2">
-                <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">
-                  My Projects
-                </div>
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
-                  Check out my latest work
-                </h2>
-                <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  I&apos;ve worked on a variety of projects, from simple
-                  websites to complex web applications. Here are a few of my
-                  favorites.
-                </p>
-              </div>
-            </div>
-          </BlurFade>
-          <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 max-w-[800px] mx-auto">
-            {DATA.projects.map((project, id) => (
-              <BlurFade
-                key={project.title}
-                delay={BLUR_FADE_DELAY * 12 + id * 0.05}
-              >
-                <ProjectCard
-                  href={project.href}
-                  key={project.title}
-                  title={project.title}
-                  description={project.description}
-                  dates={project.dates}
-                  tags={project.technologies}
-                  image={project.image}
-                  video={project.video}
-                  links={project.links}
-                />
-              </BlurFade>
-            ))}
-          </div>
+          <Projects delay={BLUR_FADE_DELAY * 11} />
         </div>
       </section>
       <section id="hackathons">
@@ -164,10 +151,10 @@ export default function Page() {
                   I ❤️ collaborating
                 </h2>
                 <p className="text-muted-foreground md:text-lg/relaxed lg:text-base/relaxed xl:text-lg/relaxed">
-                  I like to collaborate and participate in hackathons where I get to 
-                  meet new like-minded developers and professionals. These events are 
-                  incredible learning opportunities where passionate teams come together 
-                  to tackle challenges, share knowledge, and build innovative solutions 
+                  I like to collaborate and participate in hackathons where I get to
+                  meet new like-minded developers and professionals. These events are
+                  incredible learning opportunities where passionate teams come together
+                  to tackle challenges, share knowledge, and build innovative solutions
                   in just 2-3 days.
                 </p>
               </div>
@@ -204,24 +191,24 @@ export default function Page() {
               <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
                 Get in Touch
               </h2>
-                <p className="mx-auto max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+              <p className="mx-auto max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                 Want to chat? Just shoot me a dm{" "}
                 <Link
                   href={DATA.contact.social.X.url}
-                  className="text-blue-500 hover:underline"
+                  className="text-[#458588] hover:underline"
                 >
                   with a direct question on twitter
                 </Link>{" "}
                 or{" "}
                 <Link
                   href={DATA.contact.social.Discord.url}
-                  className="text-indigo-500 hover:underline"
+                  className="text-[#b16286] hover:underline"
                 >
                   message me on Discord
                 </Link>
                 , and I&apos;ll respond whenever I can. I will ignore all
                 soliciting.
-                </p>
+              </p>
             </div>
           </BlurFade>
         </div>

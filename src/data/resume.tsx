@@ -4,7 +4,7 @@ import { HomeIcon, NotebookIcon } from "lucide-react";
 export const DATA = {
   name: "Md Asharaf",
   initials: "MA",
-  url: "https://md-asharaf.dev",
+  url: "https://asharaf.me",
   location: "Bhubaneswar, Odisha",
   locationLink: "https://www.google.com/maps/place/bhubaneswar",
   description:
@@ -29,11 +29,9 @@ export const DATA = {
     "Java",
     "C++",
     "Go",
-    // "Kubernetes",
   ],
   navbar: [
     { href: "/", icon: HomeIcon, label: "Home" },
-    // { href: "/blog", icon: NotebookIcon, label: "Blog" },
   ],
   contact: {
     email: "mdasharaf.dev@gmail.com",
@@ -53,7 +51,7 @@ export const DATA = {
 
         navbar: true,
       },
-      Discord:{
+      Discord: {
         name: "Discord",
         url: "https://discord.com/users/791172205609746433",
         icon: Icons.discord,
@@ -80,10 +78,10 @@ export const DATA = {
   work: [
     {
       company: "Techsolace",
-      href: "https://techsolace.com",
-      badges: [],
+      href: "https://techsolace.in",
+      badges: ["intern"],
       location: "Remote",
-      title: "Backend Developer (Intern)",
+      title: "Backend Developer",
       logoUrl: "https://ik.imagekit.io/yzxrxw4ib5/techsolace.jpg?updatedAt=1753858721765",
       start: "June 2024",
       end: "Present",
@@ -91,16 +89,16 @@ export const DATA = {
         "Developing scalable backend systems and APIs. Working with modern technologies including Node.js, TypeScript, and cloud infrastructure to build robust applications.",
     },
     {
-      company: "NazraSoft",
-      badges: [],
+      company: "Nazrasoft",
+      badges: ["intern"],
       href: "https://www.nazrasoftware.com",
       location: "Remote",
-      title: "Software Developer (Intern)",
+      title: "Software Developer",
       logoUrl: "https://ik.imagekit.io/yzxrxw4ib5/nazrasoft.png?updatedAt=1753858703718",
       start: "October 2024",
       end: "March 2025",
       description:
-        "Developed automation tools and database management systems. Worked with Go, MySQL, and Kubernetes to create scalable solutions for internal development teams.",
+        "Developed full-stack web applications using React, Next.js, and Express.js. Built scalable backend APIs and interactive frontend interfaces while working with modern technologies like TypeScript and database systems.",
     }
   ],
   education: [
@@ -111,6 +109,8 @@ export const DATA = {
       logoUrl: "https://ik.imagekit.io/yzxrxw4ib5/kist.jpeg?updatedAt=1753858736541",
       start: "2022",
       end: "present",
+      location: "Bhubaneswar, Odisha",
+      description: "Pursuing Bachelor of Technology in Computer Science and Engineering with focus on software development, data structures, algorithms, and modern programming technologies.",
     }
   ],
   projects: [
@@ -147,7 +147,7 @@ export const DATA = {
           type: "Website",
           href: "https://shot-tube.live",
           icon: <Icons.globe className="size-3" />,
-        },{
+        }, {
           type: "Source",
           href: "https://github.com/md-asharaf/tubeX",
           icon: <Icons.github className="size-3" />,
@@ -257,7 +257,7 @@ export const DATA = {
       description:
         "Developed a web application promoting rural tourism in India by connecting local artisans with tourists. The app allows users to book tours, buy local handicrafts, and learn about the culture and traditions of rural India.",
       image:
-        "https://ik.imagekit.io/yzxrxw4ib5/infosys-hackathon.jpg?updatedAt=1753859094911",
+        "https://ik.imagekit.io/yzxrxw4ib5/infosys.jpg?updatedAt=1754232388884",
       mlh: "https://s3.amazonaws.com/logged-assets/trust-badge/2019/mlh-trust-badge-2019-white.svg",
       links: [],
     }

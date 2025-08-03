@@ -1,5 +1,6 @@
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
+import { CalendarIcon, MapPinIcon } from "lucide-react";
 import Link from "next/link";
 
 interface Props {
@@ -31,25 +32,34 @@ export function HackathonCard({
           <AvatarFallback>{title[0]}</AvatarFallback>
         </Avatar>
       </div>
-      <div className="flex flex-1 flex-col justify-start gap-1">
-        {dates && (
-          <time className="text-xs text-muted-foreground">{dates}</time>
-        )}
-        <h2 className="font-semibold leading-none">{title}</h2>
+      <div className="flex justify-between">
+        <div className="flex flex-1 flex-col justify-start gap-1">
+          <h2 className="font-semibold leading-none">{title}</h2>
+          {dates && (
+            <time className="text-xs text-muted-foreground flex items-center gap-1">
+              <CalendarIcon className="size-3"/>
+              {dates}
+            </time>
+          )}
+          {description && (
+            <span className="mt-1 prose dark:prose-invert text-sm text-muted-foreground">
+              {description}
+            </span>
+          )}
+        </div>
         {location && (
-          <p className="text-sm text-muted-foreground">{location}</p>
-        )}
-        {description && (
-          <span className="prose dark:prose-invert text-sm text-muted-foreground">
-            {description}
-          </span>
+          <div><p className="text-sm text-muted-foreground flex items-center gap-1">
+            <MapPinIcon className="size-3"/>
+            <div>{location}</div>
+          </p></div>
         )}
       </div>
+
       {links && links.length > 0 && (
         <div className="mt-2 flex flex-row flex-wrap items-start gap-2">
           {links?.map((link, idx) => (
             <Link href={link.href} key={idx}>
-              <Badge key={idx} title={link.title} className="flex gap-2">
+              <Badge key={idx} title={link.title} className="flex gap-2 bg-[#689d6a]/20 text-[#689d6a] border-[#689d6a]/40 hover:bg-[#689d6a]/30 hover:text-[#458588] hover:border-[#689d6a] dark:bg-[#689d6a]/20 dark:text-[#8ec07c] dark:border-[#689d6a]/30 dark:hover:bg-[#689d6a]/30 dark:hover:text-[#a8cc8c] transition-colors duration-200" variant="outline">
                 {link.icon}
                 {link.title}
               </Badge>

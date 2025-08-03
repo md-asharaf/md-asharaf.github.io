@@ -4,65 +4,67 @@
 
 @layer base {
     :root {
-      --background: 0 0% 100%;
-      --foreground: 210 11.1% 3.53%;
+      /* Gruvbox Light Theme Colors */
+      --background: 42 22% 96%; /* #fbf1c7 */
+      --foreground: 32 6% 20%; /* #3c3836 */
 
-      --card: 0 0% 100%;
-      --card-foreground: 210 11.1% 3.53%;
+      --card: 42 22% 96%; /* #fbf1c7 */
+      --card-foreground: 32 6% 20%; /* #3c3836 */
 
-      --popover: 0 0% 100%;
-      --popover-foreground: 210 11.1% 3.53%;
+      --popover: 42 25% 95%; /* #f9f5d7 */
+      --popover-foreground: 32 6% 20%; /* #3c3836 */
 
-      --primary: 0 0% 9%;
-      --primary-foreground: 0 0% 98%;
+      --primary: 32 6% 20%; /* #3c3836 */
+      --primary-foreground: 42 22% 96%; /* #fbf1c7 */
 
-      --secondary: 0 0% 96.1%;
-      --secondary-foreground: 0 0% 9%;
+      --secondary: 45 25% 91%; /* #f2e5bc */
+      --secondary-foreground: 32 6% 20%; /* #3c3836 */
 
-      --muted: 0 0% 96.1%;
-      --muted-foreground: 0 0% 45.1%;
+      --muted: 45 25% 91%; /* #f2e5bc */
+      --muted-foreground: 32 12% 45%; /* #665c54 */
 
-      --accent: 0 0% 96.1%;
-    --accent-foreground: 0 0% 9%;
+      --accent: 45 25% 91%; /* #f2e5bc */
+      --accent-foreground: 32 6% 20%; /* #3c3836 */
 
-      --destructive: 0 84.2% 60.2%;
-      --destructive-foreground: 0 0% 98%;
+      --destructive: 4 68% 56%; /* #cc241d */
+      --destructive-foreground: 42 22% 96%; /* #fbf1c7 */
 
-      --border: 0 0% 89.8%;
-      --input: 0 0% 89.8%;
-      --ring: 0 0% 3.9%;
+      --border: 32 12% 57%; /* #928374 */
+      --input: 45 25% 91%; /* #f2e5bc */
+      --ring: 153 31% 54%; /* #689d6a */
 
       --radius: 0.5rem;
     }
 
     .dark {
-      --background: 210 11.1% 3.53%;
-      --foreground: 0 0% 98%;
+      /* Gruvbox Dark Theme Colors */
+      --background: 0 0% 11%; /* #1d2021 */
+      --foreground: 60 9% 87%; /* #ebdbb2 */
 
-      --card: 210 11.1% 3.53%;
-      --card-foreground: 0 0% 98%;
+      --card: 30 8% 16%; /* #282828 */
+      --card-foreground: 60 9% 87%; /* #ebdbb2 */
 
-      --popover: 210 11.1% 3.53%;
-      --popover-foreground: 0 0% 98%;
+      --popover: 30 8% 16%; /* #282828 */
+      --popover-foreground: 60 9% 87%; /* #ebdbb2 */
 
-      --primary: 0 0% 98%;
-      --primary-foreground: 0 0% 9%;
+      --primary: 60 9% 87%; /* #ebdbb2 */
+      --primary-foreground: 0 0% 11%; /* #1d2021 */
 
-      --secondary: 0 0% 14.9%;
-      --secondary-foreground: 0 0% 98%;
+      --secondary: 32 6% 23%; /* #3c3836 */
+      --secondary-foreground: 60 9% 87%; /* #ebdbb2 */
 
-      --muted: 0 0% 14.9%;
-      --muted-foreground: 0 0% 63.9%;
+      --muted: 32 6% 23%; /* #3c3836 */
+      --muted-foreground: 32 12% 45%; /* #665c54 */
 
-      --accent: 0 0% 14.9%;
-      --accent-foreground: 0 0% 98%;
+      --accent: 32 6% 23%; /* #3c3836 */
+      --accent-foreground: 60 9% 87%; /* #ebdbb2 */
 
-      --destructive: 0 62.8% 30.6%;
-      --destructive-foreground: 0 0% 98%;
+      --destructive: 4 68% 56%; /* #cc241d */
+      --destructive-foreground: 60 9% 87%; /* #ebdbb2 */
 
-      --border: 0 0% 14.9%;
-      --input: 0 0% 14.9%;
-      --ring: 0 0% 83.1%;
+      --border: 32 12% 45%; /* #665c54 */
+      --input: 32 6% 23%; /* #3c3836 */
+      --ring: 153 31% 54%; /* #689d6a */
     }
   }
 
