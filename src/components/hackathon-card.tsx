@@ -37,29 +37,29 @@ export function HackathonCard({
           <h2 className="font-semibold leading-none">{title}</h2>
           {dates && (
             <time className="text-xs text-muted-foreground flex items-center gap-1">
-              <CalendarIcon className="size-3"/>
+              <CalendarIcon className="size-3" />
               {dates}
             </time>
           )}
-          {description && (
-            <span className="mt-1 prose dark:prose-invert text-sm text-muted-foreground">
-              {description}
-            </span>
-          )}
+
         </div>
         {location && (
           <div><p className="text-sm text-muted-foreground flex items-center gap-1">
-            <MapPinIcon className="size-3"/>
+            <MapPinIcon className="size-3" />
             <div>{location}</div>
           </p></div>
         )}
       </div>
-
+      {description && (
+        <span className="mt-1 prose dark:prose-invert text-sm text-muted-foreground">
+          {description}
+        </span>
+      )}
       {links && links.length > 0 && (
         <div className="mt-2 flex flex-row flex-wrap items-start gap-2">
           {links?.map((link, idx) => (
             <Link href={link.href} key={idx}>
-              <Badge key={idx} title={link.title} className="flex gap-2 px-3 py-2 text-xs font-semibold bg-transparent text-black border-black/50 hover:bg-[#a9dc76] hover:text-white hover:border-[#a9dc76] dark:text-white dark:border-white/50 dark:hover:bg-[#a9dc76] dark:hover:text-white dark:hover:border-[#a9dc76] transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105" variant="outline">
+              <Badge key={idx} title={link.title} className="flex gap-2 px-3 py-2 text-xs font-semibold bg-transparent text-black border-black/50 hover:text-green-500 hover:border-green-500 dark:text-white dark:border-white/50 dark:hover:text-green- dark:hover:border-green-500 transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105" variant="outline">
                 {link.icon}
                 {link.title}
               </Badge>

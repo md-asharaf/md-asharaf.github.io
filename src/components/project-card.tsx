@@ -60,7 +60,7 @@ export function ProjectCard({
             className="pointer-events-none mx-auto h-40 w-full object-cover object-top" // needed because random black line at bottom of video
           />
         )}
-        {image && (
+        {image ? (
           <Image
             src={image}
             alt={title}
@@ -68,6 +68,8 @@ export function ProjectCard({
             height={300}
             className="h-40 w-full overflow-hidden object-cover object-top"
           />
+        ) : (
+          <div className="h-40 w-full bg-gray-100 dark:bg-gray-800" />
         )}
       </Link>
       <CardHeader className="px-2">

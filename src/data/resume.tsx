@@ -67,10 +67,9 @@ export const DATA = {
       },
       email: {
         name: "Send Email",
-        url: "#",
+        url: "mailto:mdasharaf.dev@gmail.com",
         icon: Icons.email,
-
-        navbar: false,
+        navbar: true,
       },
     },
   },
@@ -95,8 +94,8 @@ export const DATA = {
       location: "Remote",
       title: "Software Developer",
       logoUrl: "https://ik.imagekit.io/yzxrxw4ib5/nazrasoft.png?updatedAt=1753858703718",
-      start: "October 2024",
-      end: "March 2025",
+      start: "Oct 2024",
+      end: "Mar 2025",
       description:
         "Developed full-stack web applications using React, Next.js, and Express.js. Built scalable backend APIs and interactive frontend interfaces while working with modern technologies like TypeScript and database systems.",
     }
@@ -107,7 +106,7 @@ export const DATA = {
       href: "https://kist.ac.in/",
       degree: "B.Tech in Computer Science and Engineering",
       logoUrl: "https://ik.imagekit.io/yzxrxw4ib5/kist.jpeg?updatedAt=1753858736541",
-      start: "2022",
+      start: "Aug 2022",
       end: "present",
       location: "Bhubaneswar, Odisha",
       description: "Pursuing Bachelor of Technology in Computer Science and Engineering with focus on software development, data structures, algorithms, and modern programming technologies.",
@@ -147,7 +146,8 @@ export const DATA = {
           type: "Website",
           href: "https://shot-tube.live",
           icon: <Icons.globe className="size-3" />,
-        }, {
+        }, 
+        {
           type: "Source",
           href: "https://github.com/md-asharaf/tubeX",
           icon: <Icons.github className="size-3" />,
@@ -259,7 +259,11 @@ export const DATA = {
       image:
         "https://ik.imagekit.io/yzxrxw4ib5/infosys.jpg?updatedAt=1754232388884",
       mlh: "https://s3.amazonaws.com/logged-assets/trust-badge/2019/mlh-trust-badge-2019-white.svg",
-      links: [],
+      links: [{
+          title: "Source",
+          href: "https://github.com/md-asharaf/effective-carnival",
+          icon: <Icons.globe className="size-3" />,
+        }],
     }
   ],
 } as const;

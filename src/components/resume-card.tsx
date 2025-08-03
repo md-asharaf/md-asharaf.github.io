@@ -65,7 +65,7 @@ export const ResumeCard = ({
                     {badges.map((badge, index) => (
                       <Badge
                         variant="outline"
-                        className="align-middle text-xs bg-transparent text-black border-black/30 hover:text-[#ff6188] hover:border-[#ff6188] dark:text-white dark:border-white/30 dark:hover:text-[#ff6188] dark:hover:border-[#ff6188] transition-colors duration-200"
+                        className="px-2 py-0.5 align-middle text-xs bg-transparent text-black border-black/30 hover:text-[#ff6188] hover:border-[#ff6188] dark:text-white dark:border-white/30 dark:hover:text-[#ff6188] dark:hover:border-[#ff6188] transition-colors duration-200"
                         key={index}
                       >
                         {badge}
