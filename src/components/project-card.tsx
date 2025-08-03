@@ -43,7 +43,7 @@ export function ProjectCard({
   return (
     <Card
       className={
-        "flex flex-col overflow-hidden border-[#928374]/20 dark:border-[#504945]/30 hover:border-[#689d6a]/40 hover:shadow-lg transition-all duration-300 ease-out h-full bg-transparent"
+        "flex flex-col overflow-hidden border-2 border-[#727072]/20 dark:border-[#727072]/30 hover:border-[#ff6188]/40 dark:hover:border-[#ff6188]/40 hover:shadow-lg hover:shadow-[#ff6188]/10 transition-all duration-300 ease-out h-full bg-transparent backdrop-blur-sm"
       }
     >
       <Link
@@ -87,7 +87,7 @@ export function ProjectCard({
           <div className="mt-2 flex flex-wrap gap-1">
             {tags?.map((tag) => (
               <Badge
-                className="px-1 py-0 text-[10px] bg-[#928374]/20 text-[#928374] border-[#928374]/30 hover:bg-[#689d6a]/20 hover:text-[#689d6a] hover:border-[#689d6a]/50 dark:bg-[#504945]/30 dark:text-[#a89984] dark:border-[#665c54] dark:hover:bg-[#689d6a]/20 dark:hover:text-[#8ec07c] dark:hover:border-[#689d6a]/50 transition-colors duration-200"
+                className="px-1 py-0 text-[10px] bg-transparent text-black border-black/30 hover:bg-[#ff6188] hover:text-white hover:border-[#ff6188] dark:text-white dark:border-white/30 dark:hover:bg-[#ff6188] dark:hover:text-white dark:hover:border-[#ff6188] transition-colors duration-200"
                 variant="outline"
                 key={tag}
               >
@@ -102,7 +102,7 @@ export function ProjectCard({
           <div className="flex flex-row flex-wrap items-start gap-1">
             {links?.map((link, idx) => (
               <Link href={link?.href} key={idx} target="_blank">
-                <Badge key={idx} className="flex gap-2 px-2 py-1 text-[10px] bg-[#689d6a]/20 text-[#689d6a] border-[#689d6a]/40 hover:bg-[#689d6a]/30 hover:text-[#458588] hover:border-[#689d6a] dark:bg-[#689d6a]/20 dark:text-[#8ec07c] dark:border-[#689d6a]/30 dark:hover:bg-[#689d6a]/30 dark:hover:text-[#a8cc8c] transition-colors duration-200" variant="outline">
+                <Badge key={idx} className="flex gap-2 px-2 py-1 text-xs font-semibold bg-transparent text-black border-black/50 hover:text-green-600 hover:border-[#a9dc76] dark:text-white dark:border-white/50 dark:hover:text-green-400 dark:hover:border-[#a9dc76] transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105" variant="outline">
                   {link.icon}
                   {link.type}
                 </Badge>

@@ -41,7 +41,7 @@ export const ResumeCard = ({
   };
 
   return (
-    <Card className="flex bg-transparent border-[#928374]/20 dark:border-[#504945]/30 hover:border-[#689d6a]/40 transition-colors duration-200" >
+    <Card className="flex bg-transparent transition-all duration-300 hover:shadow-md hover:shadow-[#ff6188]/5 backdrop-blur-sm" >
       <div className="flex-none">
         <Avatar className="border size-12 m-auto bg-muted-background dark:bg-foreground">
           <AvatarImage
@@ -65,7 +65,7 @@ export const ResumeCard = ({
                     {badges.map((badge, index) => (
                       <Badge
                         variant="outline"
-                        className="align-middle text-xs bg-[#928374]/20 text-[#928374] border-[#928374]/30 hover:bg-[#689d6a]/20 hover:text-[#689d6a] hover:border-[#689d6a]/50 dark:bg-[#504945]/30 dark:text-[#a89984] dark:border-[#665c54] dark:hover:bg-[#689d6a]/20 dark:hover:text-[#8ec07c] dark:hover:border-[#689d6a]/50 transition-colors duration-200"
+                        className="align-middle text-xs bg-transparent text-black border-black/30 hover:text-[#ff6188] hover:border-[#ff6188] dark:text-white dark:border-white/30 dark:hover:text-[#ff6188] dark:hover:border-[#ff6188] transition-colors duration-200"
                         key={index}
                       >
                         {badge}

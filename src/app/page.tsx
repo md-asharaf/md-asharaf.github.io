@@ -32,18 +32,18 @@ export default function Page() {
               />
               <BlurFade delay={BLUR_FADE_DELAY * 2}>
                 <div className="flex flex-wrap gap-2 mt-1">
-                  <Badge variant="outline" className="flex items-center gap-1 hover:border-[#689d6a] transition-colors group cursor-pointer">
-                    <svg className="size-3 transition-colors group-hover:text-[#689d6a]" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <Badge variant="outline" className="flex items-center gap-1 hover:border-[#ff6188] transition-colors group cursor-pointer">
+                    <svg className="size-3 transition-colors group-hover:text-[#ff6188]" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" fill="currentColor"/>
                     </svg>
-                    <span className="transition-colors group-hover:text-[#689d6a]">
+                    <span className="transition-colors group-hover:text-[#ff6188]">
                       {DATA.location}
                     </span>
                   </Badge>
                   <RealTimeClock />
-                  <Badge variant="outline" className="flex items-center gap-1 hover:border-[#8ec07c] transition-colors group cursor-pointer">
-                    <div className="size-2 bg-[#8ec07c] rounded-full animate-pulse transition-colors group-hover:bg-[#689d6a]"></div>
-                    <span className="transition-colors group-hover:text-[#8ec07c]">
+                  <Badge variant="outline" className="flex items-center gap-1 hover:border-[#a9dc76] transition-colors group cursor-pointer">
+                    <div className="size-2 bg-green-500 rounded-full animate-pulse transition-colors group-hover:bg-green-500"></div>
+                    <span className="transition-colors group-hover:text-green-500">
                       Available for work
                     </span>
                   </Badge>
@@ -128,14 +128,14 @@ export default function Page() {
           <div className="flex flex-wrap gap-1">
             {DATA.skills.map((skill, id) => (
               <BlurFade key={skill} delay={BLUR_FADE_DELAY * 10 + id * 0.05}>
-                <Badge key={skill} variant="outline" className="bg-[#928374]/20 text-[#928374] border-[#928374]/30 hover:bg-[#689d6a]/20 hover:text-[#689d6a] hover:border-[#689d6a]/50 dark:bg-[#504945]/30 dark:text-[#a89984] dark:border-[#665c54] dark:hover:bg-[#689d6a]/20 dark:hover:text-[#8ec07c] dark:hover:border-[#689d6a]/50 transition-colors duration-200">{skill}</Badge>
+                <Badge key={skill} variant="outline" className="bg-transparent text-black border-black/30 hover:bg-[#ff6188] hover:text-white hover:border-[#ff6188] dark:text-white dark:border-white/30 dark:hover:bg-[#ff6188] dark:hover:text-white dark:hover:border-[#ff6188] transition-colors duration-200">{skill}</Badge>
               </BlurFade>
             ))}
           </div>
         </div>
       </section>
       <section id="projects">
-        <div className="space-y-12 w-full py-12">
+        <div className="space-y-12 w-full py-[55px]">
           <Projects delay={BLUR_FADE_DELAY * 11} />
         </div>
       </section>

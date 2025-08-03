@@ -25,7 +25,7 @@ export function Projects({ delay }: ProjectsSectionProps) {
             {/* Tab Navigation */}
             <BlurFade delay={delay}>
                 <div className="flex flex-col items-center justify-center space-y-4 text-center">
-                    <div className="space-y-2">
+                    <div className="space-y-4">
                         <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">
                             Featured Projects
                         </div>

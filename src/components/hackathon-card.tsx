@@ -59,7 +59,7 @@ export function HackathonCard({
         <div className="mt-2 flex flex-row flex-wrap items-start gap-2">
           {links?.map((link, idx) => (
             <Link href={link.href} key={idx}>
-              <Badge key={idx} title={link.title} className="flex gap-2 bg-[#689d6a]/20 text-[#689d6a] border-[#689d6a]/40 hover:bg-[#689d6a]/30 hover:text-[#458588] hover:border-[#689d6a] dark:bg-[#689d6a]/20 dark:text-[#8ec07c] dark:border-[#689d6a]/30 dark:hover:bg-[#689d6a]/30 dark:hover:text-[#a8cc8c] transition-colors duration-200" variant="outline">
+              <Badge key={idx} title={link.title} className="flex gap-2 px-3 py-2 text-xs font-semibold bg-transparent text-black border-black/50 hover:bg-[#a9dc76] hover:text-white hover:border-[#a9dc76] dark:text-white dark:border-white/50 dark:hover:bg-[#a9dc76] dark:hover:text-white dark:hover:border-[#a9dc76] transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105" variant="outline">
                 {link.icon}
                 {link.title}
               </Badge>

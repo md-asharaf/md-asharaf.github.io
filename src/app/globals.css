@@ -4,67 +4,67 @@
 
 @layer base {
     :root {
-      /* Gruvbox Light Theme Colors */
-      --background: 42 22% 96%; /* #fbf1c7 */
-      --foreground: 32 6% 20%; /* #3c3836 */
+      /* Monokai Pro Light Theme Colors */
+      --background: 60 9% 98%; /* #fcfcfa */
+      --foreground: 0 0% 20%; /* #403e41 */
 
-      --card: 42 22% 96%; /* #fbf1c7 */
-      --card-foreground: 32 6% 20%; /* #3c3836 */
+      --card: 60 9% 96%; /* #f8f8f2 */
+      --card-foreground: 0 0% 20%; /* #403e41 */
 
-      --popover: 42 25% 95%; /* #f9f5d7 */
-      --popover-foreground: 32 6% 20%; /* #3c3836 */
+      --popover: 60 9% 96%; /* #f8f8f2 */
+      --popover-foreground: 0 0% 20%; /* #403e41 */
 
-      --primary: 32 6% 20%; /* #3c3836 */
-      --primary-foreground: 42 22% 96%; /* #fbf1c7 */
+      --primary: 326 100% 74%; /* #ff6188 */
+      --primary-foreground: 60 9% 98%; /* #fcfcfa */
 
-      --secondary: 45 25% 91%; /* #f2e5bc */
-      --secondary-foreground: 32 6% 20%; /* #3c3836 */
+      --secondary: 0 0% 93%; /* #eeeee8 */
+      --secondary-foreground: 0 0% 20%; /* #403e41 */
 
-      --muted: 45 25% 91%; /* #f2e5bc */
-      --muted-foreground: 32 12% 45%; /* #665c54 */
+      --muted: 0 0% 93%; /* #eeeee8 */
+      --muted-foreground: 0 0% 40%; /* #727072 */
 
-      --accent: 45 25% 91%; /* #f2e5bc */
-      --accent-foreground: 32 6% 20%; /* #3c3836 */
+      --accent: 55 100% 70%; /* #ffd866 */
+      --accent-foreground: 0 0% 20%; /* #403e41 */
 
-      --destructive: 4 68% 56%; /* #cc241d */
-      --destructive-foreground: 42 22% 96%; /* #fbf1c7 */
+      --destructive: 0 74% 58%; /* #f83535 */
+      --destructive-foreground: 60 9% 98%; /* #fcfcfa */
 
-      --border: 32 12% 57%; /* #928374 */
-      --input: 45 25% 91%; /* #f2e5bc */
-      --ring: 153 31% 54%; /* #689d6a */
+      --border: 0 0% 40%; /* #727072 */
+      --input: 0 0% 93%; /* #eeeee8 */
+      --ring: 326 100% 74%; /* #ff6188 */
 
       --radius: 0.5rem;
     }
 
     .dark {
-      /* Gruvbox Dark Theme Colors */
-      --background: 0 0% 11%; /* #1d2021 */
-      --foreground: 60 9% 87%; /* #ebdbb2 */
+      /* Monokai Pro Dark Theme Colors */
+      --background: 300 4% 13%; /* #221f22 */
+      --foreground: 60 9% 96%; /* #f8f8f2 */
 
-      --card: 30 8% 16%; /* #282828 */
-      --card-foreground: 60 9% 87%; /* #ebdbb2 */
+      --card: 300 7% 18%; /* #2d2a2e */
+      --card-foreground: 60 9% 96%; /* #f8f8f2 */
 
-      --popover: 30 8% 16%; /* #282828 */
-      --popover-foreground: 60 9% 87%; /* #ebdbb2 */
+      --popover: 300 7% 18%; /* #2d2a2e */
+      --popover-foreground: 60 9% 96%; /* #f8f8f2 */
 
-      --primary: 60 9% 87%; /* #ebdbb2 */
-      --primary-foreground: 0 0% 11%; /* #1d2021 */
+      --primary: 326 100% 74%; /* #ff6188 */
+      --primary-foreground: 300 4% 13%; /* #221f22 */
 
-      --secondary: 32 6% 23%; /* #3c3836 */
-      --secondary-foreground: 60 9% 87%; /* #ebdbb2 */
+      --secondary: 0 0% 25%; /* #403e41 */
+      --secondary-foreground: 60 9% 96%; /* #f8f8f2 */
 
-      --muted: 32 6% 23%; /* #3c3836 */
-      --muted-foreground: 32 12% 45%; /* #665c54 */
+      --muted: 0 0% 25%; /* #403e41 */
+      --muted-foreground: 0 0% 45%; /* #727072 */
 
-      --accent: 32 6% 23%; /* #3c3836 */
-      --accent-foreground: 60 9% 87%; /* #ebdbb2 */
+      --accent: 55 100% 70%; /* #ffd866 */
+      --accent-foreground: 300 4% 13%; /* #221f22 */
 
-      --destructive: 4 68% 56%; /* #cc241d */
-      --destructive-foreground: 60 9% 87%; /* #ebdbb2 */
+      --destructive: 0 74% 58%; /* #f83535 */
+      --destructive-foreground: 60 9% 96%; /* #f8f8f2 */
 
-      --border: 32 12% 45%; /* #665c54 */
-      --input: 32 6% 23%; /* #3c3836 */
-      --ring: 153 31% 54%; /* #689d6a */
+      --border: 0 0% 45%; /* #727072 */
+      --input: 0 0% 25%; /* #403e41 */
+      --ring: 326 100% 74%; /* #ff6188 */
     }
   }
 
@@ -143,4 +143,39 @@ code[data-line-numbers-max-digits="2"] > [data-line]::before {
  
 code[data-line-numbers-max-digits="3"] > [data-line]::before {
   width: 3rem;
+}
+
+/* Grid and Dot Background Patterns */
+.bg-grid-black\/\[0\.2\] {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 0, 0, 0.4) 1px, transparent 1px);
+  background-size: 30px 30px;
+}
+
+.bg-grid-white\/\[0\.2\] {
+  background-image: linear-gradient(rgba(255, 255, 255, 0.4) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.4) 1px, transparent 1px);
+  background-size: 30px 30px;
+}
+
+.bg-grid-small-black\/\[0\.2\] {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 0, 0, 0.4) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+.bg-grid-small-white\/\[0\.2\] {
+  background-image: linear-gradient(rgba(255, 255, 255, 0.4) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.4) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+.bg-dot-black\/\[0\.2\] {
+  background-image: radial-gradient(rgba(0, 0, 0, 0.25) 1px, transparent 1px);
+  background-size: 25px 25px;
+}
+
+.bg-dot-white\/\[0\.2\] {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.25) 1px, transparent 1px);
+  background-size: 25px 25px;
 }
